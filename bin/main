@@ -1,50 +1,52 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
+
+# board
 class TicTac
-    def initialize
-    end
-    def displayboard
-        puts "+---+---+---+"
-        puts "| 1 | 2 | 3 |"
-        puts "+---+---+---+"
-        puts "| 4 | 5 | 6 |"
-        puts "+---+---+---+"
-        puts "| 7 | 8 | 9 |"
-        puts "+---+---+---+"
-    end
+  def initialize; end
+
+  def displayboard
+    puts '+---+---+---+'
+    puts '| 1 | 2 | 3 |'
+    puts '+---+---+---+'
+    puts '| 4 | 5 | 6 |'
+    puts '+---+---+---+'
+    puts '| 7 | 8 | 9 |'
+    puts '+---+---+---+'
+  end
 end
 puts 'Welcome to Ruby"s Tic Tac Toe'
-puts "Enter first player name:"
+puts 'Enter first player name:'
 name1 = gets.chomp
-puts "Enter second player name:"
+puts 'Enter second player name:'
 name2 = gets.chomp
 puts "#{name1} will play with  X and #{name2} will play with  O"
 sleep(1)
 puts "\n Lets Start.."
 sleep(1)
 puts `clear`
-x=TicTac.new
+x = TicTac.new
 x.displayboard
 puts "\n"
-puts "Its #{name1} turn!" 
+puts "Its #{name1} turn!"
 puts "\n"
-puts "Please select the available cell from the board"
+puts 'Please select the available cell from the board'
 cell_num = gets.chomp.to_i
 if cell_num >= 1 && cell_num <= 9
-    puts `clear`
-    x.displayboard
-    puts "\n"
-    puts "Its #{name2} turn!" 
-    puts "\n"
-    puts "Please select the available cell from the board"
-    cell_num = gets.chomp.to_i
+  puts `clear`
+  x.displayboard
+  puts "\n"
+  puts "Its #{name2} turn!"
+  puts "\n"
+  puts 'Please select the available cell from the board'
+#   cell_num = gets.chomp.to_i
 else
-    puts "invalid move"
-    puts "Please enter a valid number from 1 - 9!"
+  puts 'invalid move'
+  puts 'Please enter a valid number from 1 - 9!'
 end
 x.displayboard
 puts "\n"
-puts "Its #{name2} turn!" 
+puts "Its #{name2} turn!"
 puts "\n"
-puts "Please select the available cell from the board"
+puts 'Please select the available cell from the board'
 cell_num = gets.chomp
-
