@@ -24,4 +24,30 @@ sleep(1)
 puts `clear`
 x=TicTac.new
 x.displayboard
+puts "\n"
+puts "Its #{name1} turn!" 
+puts "\n"
+puts "Please select the available cell from the board"
+cell_num = gets.chomp
+if cell_num >= 1 && <= 9
+  puts "clear"
+  x.displayboard
+  puts "\n"
+  puts "Its #{name2} turn!" 
+  puts "\n"
+  puts "Please select the available cell from the board"
+  cell_num = gets.chomp
+else
+    puts "invalid move"
+    puts "Please enter a valid number from 1 - 9!"
+end
+puts "clear"
+x.displayboard
+puts "\n"
+puts "Its #{name2} turn!" 
+puts "\n"
+puts "Please select the available cell from the board"
+cell_num = gets.chomp
+
+
 
