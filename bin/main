@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-# frozen_string_literal: true
+
 
 # board
 class TicTac
@@ -39,7 +39,7 @@ if cell_num >= 1 && cell_num <= 9
   puts "Its #{name2} turn!"
   puts "\n"
   puts 'Please select the available cell from the board'
-#   cell_num = gets.chomp.to_i
+  gets.chomp.to_i
 else
   puts 'invalid move'
   puts 'Please enter a valid number from 1 - 9!'
@@ -49,4 +49,4 @@ puts "\n"
 puts "Its #{name2} turn!"
 puts "\n"
 puts 'Please select the available cell from the board'
-cell_num = gets.chomp
+gets.chomp
