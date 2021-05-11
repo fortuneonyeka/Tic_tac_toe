@@ -23,11 +23,7 @@ class TicTac
   end
 
   def numeric?(obj)
-    if obj.to_s.match(/\A[+-]?\d+?(\.\d+)?\Z/).nil?
-      false
-    else
-      true
-    end
+    !obj.to_s.match(/\A[+-]?\d+?(\.\d+)?\Z/).nil?
   end
 
   def displayboard
