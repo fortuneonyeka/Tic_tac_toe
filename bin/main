@@ -17,14 +17,14 @@ class TicTac
     puts '+---+---+---+'
   end
 end
-x = TicTac.new
+Tic = TicTac.new
 puts 'Welcome to Ruby"s Tic Tac Toe'
 puts 'Enter first player name:'
 name1 = gets.chomp
 while (true) do
     if name1 == ""
        puts "empty string please input valid name"
-    elsif x.is_numeric? name1
+    elsif Tic.is_numeric? name1
        puts "name can not be integer please input valid name"
     else
         break
@@ -38,7 +38,7 @@ name2 = gets.chomp
 while (true) do
     if name2 == ""
        puts "empty string please input valid name"
-    elsif x.is_numeric? name2
+    elsif Tic.is_numeric? name2
        puts "name can not be integer please input valid name"
     else
         break
@@ -50,28 +50,43 @@ puts "#{name1} will play with  X and #{name2} will play with  O"
 sleep(1)
 puts "\n Lets Start.."
 sleep(1)
-puts `clear`
-x.displayboard
-puts "\n"
-puts "Its #{name1} turn!"
-puts "\n"
-puts 'Please select the available cell from the board'
-cell_num = gets.chomp.to_i
-if cell_num >= 1 && cell_num <= 9
+x=0
+while(true) do
   puts `clear`
-  x.displayboard
+  Tic.displayboard
   puts "\n"
-  puts "Its #{name2} turn!"
-  puts "\n"
-  puts 'Please select the available cell from the board'
-  gets.chomp.to_i
-else
-  puts 'invalid move'
-  puts 'Please enter a valid number from 1 - 9!'
+  if(x==0)
+    puts "Its #{name1} turn!"
+    puts "\n"
+    puts 'Please select the available cell from the board'
+    cell_num = gets.chomp.to_i
+    puts cell_num
+    while(true) do
+      if cell_num >= 1 && cell_num <= 9
+         break
+      else
+         puts 'invalid move'
+         puts 'Please enter a valid number from 1 - 9!'
+         cell_num = gets.chomp.to_i
+      end
+    end
+    x=1
+
+  else
+    puts "Its #{name2} turn!"
+    puts "\n"
+    puts 'Please select the available cell from the board'
+    cell_num=gets.chomp.to_i
+    while(true) do 
+      if (cell_num >= 1 && cell_num <= 9)
+         break
+      else
+         puts 'invalid move'
+         puts 'Please enter a valid number from 1 - 9!'
+         cell_num = gets.chomp.to_i
+      end
+    end
+    x=0
+  end
+ 
 end
-x.displayboard
-puts "\n"
-puts "Its #{name2} turn!"
-puts "\n"
-puts 'Please select the available cell from the board'
-gets.chomp
