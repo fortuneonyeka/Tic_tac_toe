@@ -3,6 +3,9 @@
 # board
 class TicTac
   def initialize; end
+  def is_numeric?(obj) 
+    obj.to_s.match(/\A[+-]?\d+?(\.\d+)?\Z/) == nil ? false : true
+  end
 
   def displayboard
     puts '+---+---+---+'
@@ -14,17 +17,40 @@ class TicTac
     puts '+---+---+---+'
   end
 end
+x = TicTac.new
 puts 'Welcome to Ruby"s Tic Tac Toe'
 puts 'Enter first player name:'
 name1 = gets.chomp
+while (true) do
+    if name1 == ""
+       puts "empty string please input valid name"
+    elsif x.is_numeric? name1
+       puts "name can not be integer please input valid name"
+    else
+        break
+    end
+    name1 = gets.chomp
+end
+
 puts 'Enter second player name:'
 name2 = gets.chomp
+
+while (true) do
+    if name2 == ""
+       puts "empty string please input valid name"
+    elsif x.is_numeric? name2
+       puts "name can not be integer please input valid name"
+    else
+        break
+    end
+    name2 = gets.chomp
+end
+
 puts "#{name1} will play with  X and #{name2} will play with  O"
 sleep(1)
 puts "\n Lets Start.."
 sleep(1)
 puts `clear`
-x = TicTac.new
 x.displayboard
 puts "\n"
 puts "Its #{name1} turn!"
