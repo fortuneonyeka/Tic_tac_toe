@@ -35,6 +35,7 @@ end
 puts 'Enter second player name:'
 name2 = gets.chomp
 
+
 while (true) do
     if name2 == ""
        puts "empty string please input valid name"
@@ -51,6 +52,7 @@ sleep(1)
 puts "\n Lets Start.."
 sleep(1)
 x=0
+num_turn = 0
 while(true) do
   puts `clear`
   Tic.displayboard
@@ -88,5 +90,23 @@ while(true) do
     end
     x=0
   end
- 
+  if num_turn == 9
+    puts "The game is draw"
+    return 
+  end
+  num_turn +=1
 end
+
+# def full?(board)
+#   board.all?{|i| i == "x" || i == "0"}
+# end
+
+# def draw?(board)
+#   if !won?(board) && full?(board)
+#     return true
+#   elsif !won (board) && !full?(board)
+#     return false
+#   else won?(board)
+#     return false
+#   end
+# end
