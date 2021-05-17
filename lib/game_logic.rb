@@ -14,6 +14,8 @@
         puts '+---+---+---+'
     end
 
+    WIN_COMBINATION_TEMP = [[1, 2, 3], [1, 4, 7], [2, 5, 8], [3, 6, 9], [4, 5, 6], [7, 8, 9], [1, 5, 9], [3, 5, 7]].freeze
+
     def valid_move
       input.between?(1, 9) && !position_taken?(input)
     end
