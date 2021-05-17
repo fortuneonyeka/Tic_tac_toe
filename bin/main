@@ -7,10 +7,35 @@ class TicTac
   def initialize; end
 
   def checkwinner
-    puts 'The winner is X'
+    if $instance.board[0]==$instance.board[1] && $instance.board[1]==$instance.board[2]
+      return true
+    elsif $instance.board[3]==$instance.board[4] && $instance.board[4]==$instance.board[5]
+      return true
+
+    elsif $instance.board[6]==$instance.board[7] && $instance.board[7]==$instance.board[8]
+      return true
+
+    elsif $instance.board[0]==$instance.board[3] && $instance.board[3]==$instance.board[6]
+      return true
+
+    elsif $instance.board[1]==$instance.board[4] && $instance.board[4]==$instance.board[7]
+      return true
+
+    elsif $instance.board[2]==$instance.board[5] && $instance.board[5]==$instance.board[8]
+      return true
+
+    elsif $instance.board[0]==$instance.board[4] && $instance.board[4]==$instance.board[8]
+      return true
+
+    elsif $instance.board[2]==$instance.board[4] && $instance.board[4]==$instance.board[6]
+      return true
+    else
+      return false
+    end
   end
 
   def playerturn(name,x)
+    check= TicTac.new
     puts "Its #{name} turn!"
     puts "\n"
     puts 'Please select the available cell from the board'
@@ -92,19 +117,30 @@ loop do
   puts "\n"
   if num_turn == 9
     puts 'The game is drawn no player won'
+    sleep(3)
     return
   end
   if x.zero?
     Tic.playerturn(name1,x)
+    if Tic.checkwinner
+      puts "#{name1}is a Winner"
+      sleep(3)
+      return
+    end
 
     x = 1
 
   else
     Tic.playerturn(name2,x)
+    if Tic.checkwinner
+      puts "#{name2}is a Winner"
+      return
+    end
     x = 0
   end
   num_turn += 1
 end
+
 
 # def full?(board)
 #   board.all?{|i| i == "x" || i == "0"}
