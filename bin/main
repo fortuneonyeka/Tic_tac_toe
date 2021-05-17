@@ -1,6 +1,8 @@
 #!/usr/bin/env ruby
+require_relative '../lib/game_logic.rb'
 
 # board
+
 class TicTac
   def initialize; end
 
@@ -8,13 +10,21 @@ class TicTac
     puts 'The winner is X'
   end
 
-  def playerturn(name)
+  def playerturn(name,x)
     puts "Its #{name} turn!"
     puts "\n"
     puts 'Please select the available cell from the board'
     cell_num = gets.chomp.to_i
     loop do
-      break if cell_num >= 1 && cell_num <= 9
+      if cell_num >= 1 && cell_num <= 9  &&  $instance.board[cell_num-1]==cell_num     
+        puts "valid move"   
+        if x==0
+          $instance.board[cell_num-1]='X'
+        else
+          $instance.board[cell_num-1]='O'
+        end
+        break
+      end
 
       puts 'invalid move'
       puts 'Please enter a valid number from 1 - 9!'
@@ -28,14 +38,18 @@ class TicTac
 
   def displayboard
     puts '+---+---+---+'
-    puts '| 1 | 2 | 3 |'
+    puts "| #{$instance.board[0]} | #{$instance.board[1]} | #{$instance.board[2]} |"
     puts '+---+---+---+'
-    puts '| 4 | 5 | 6 |'
+    puts "| #{$instance.board[3]} | #{$instance.board[4]} | #{$instance.board[5]} |"
     puts '+---+---+---+'
-    puts '| 7 | 8 | 9 |'
+    puts "| #{$instance.board[6]} | #{$instance.board[7]} | #{$instance.board[8]} |"
     puts '+---+---+---+'
   end
 end
+arr=(1..9).to_a 
+
+puts arr[8]
+$instance =Board.new
 Tic = TicTac.new
 puts 'Welcome to Ruby"s Tic Tac Toe'
 puts 'Enter first player name:'
@@ -74,22 +88,20 @@ num_turn = 0
 loop do
   puts `clear`
   Tic.displayboard
+  puts num_turn
   puts "\n"
+  if num_turn == 9
+    puts 'The game is drawn no player won'
+    return
+  end
   if x.zero?
-    Tic.playerturn(name1)
+    Tic.playerturn(name1,x)
 
     x = 1
 
   else
-    Tic.playerturn(name2)
+    Tic.playerturn(name2,x)
     x = 0
-  end
-  if num_turn == 9
-    puts 'The game is drawn no player won'
-    return
-  else
-    Tic.checkwinner
-
   end
   num_turn += 1
 end
