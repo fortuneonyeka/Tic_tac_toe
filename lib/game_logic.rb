@@ -1,10 +1,8 @@
-# frozen_string_literal: true
-
-# rubocop: disable Metrics/CyclomaticComplexity, Metrics/PerceivedComplexity
+# rubocop: disable Metrics/CyclomaticComplexity, Metrics/PerceivedComplexity, Metrics/MethodLength,  Metrics/AbcSize:
 
 # Description/Explanation of class board
-
 class Board
+  #:nodoc:
   attr_accessor :board
 
   def initialize
@@ -65,4 +63,4 @@ class Board
   end
 end
 
-# rubocop: enable Metrics/CyclomaticComplexity, Metrics/PerceivedComplexity
+# rubocop: enable Metrics/CyclomaticComplexity, Metrics/PerceivedComplexity, Metrics/MethodLength,  Metrics/AbcSize

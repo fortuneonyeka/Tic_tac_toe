@@ -1,12 +1,13 @@
 #!/usr/bin/env ruby
-# frozen_string_literal: true
 
+# rubocop: disable Metrics/BlockLength
 require_relative '../lib/game_logic'
 
 # board
 
 # Description/Explanation of class board
 class TicTac
+  #:nodoc:
   def initialize; end
 
   def numeric?(obj)
@@ -45,9 +46,7 @@ loop do
 end
 
 puts "#{name1} will play with  X and #{name2} will play with  O"
-sleep(1)
-puts "\n Lets Start.."
-sleep(1)
+
 x = 0
 num_turn = 0
 loop do
@@ -60,9 +59,7 @@ loop do
     return
   end
   if x.zero?
-    puts "Its #{name1} turn!"
-    puts "\n"
-    puts 'Please select the available cell from the board'
+    puts "Its #{name1} turn! \n Please select the available cell from the board"
     cell = gets.chomp.to_i
     instance.playerturn(cell, x)
     if instance.checkwinner
@@ -91,3 +88,4 @@ loop do
   end
   num_turn += 1
 end
+# rubocop: enable Metrics/BlockLength
