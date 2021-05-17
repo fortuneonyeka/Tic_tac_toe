@@ -1,16 +1,20 @@
 #!/usr/bin/env ruby
-require_relative '../lib/game_logic.rb'
+# frozen_string_literal: true
+
+require_relative '../lib/game_logic'
 
 # board
 
+# Description/Explanation of class board
 class TicTac
   def initialize; end
+
   def numeric?(obj)
     !obj.to_s.match(/\A[+-]?\d+?(\.\d+)?\Z/).nil?
   end
 end
 
-$instance =Board.new
+instance = Board.new
 Tic = TicTac.new
 puts 'Welcome to Ruby"s Tic Tac Toe'
 puts 'Enter first player name:'
@@ -48,7 +52,7 @@ x = 0
 num_turn = 0
 loop do
   puts `clear`
-  $instance.displayboard
+  instance.displayboard
   puts "\n"
   if num_turn == 9
     puts 'The game is drawn no player won'
@@ -56,10 +60,14 @@ loop do
     return
   end
   if x.zero?
-    $instance.playerturn(name1,x)
-    if $instance.checkwinner
+    puts "Its #{name1} turn!"
+    puts "\n"
+    puts 'Please select the available cell from the board'
+    cell = gets.chomp.to_i
+    instance.playerturn(cell, x)
+    if instance.checkwinner
       puts `clear`
-      $instance.displayboard
+      instance.displayboard
       puts "#{name1}is a Winner"
       sleep(3)
       return
@@ -68,10 +76,14 @@ loop do
     x = 1
 
   else
-    $instance.playerturn(name2,x)
-    if $instance.checkwinner
+    puts "Its #{name2} turn!"
+    puts "\n"
+    puts 'Please select the available cell from the board'
+    cell = gets.chomp.to_i
+    instance.playerturn(cell, x)
+    if instance.checkwinner
       puts `clear`
-      $instance.displayboard
+      instance.displayboard
       puts "#{name2}is a Winner"
       return
     end
