@@ -20,31 +20,22 @@ class Board
   end
 
   def checkwinner
-    if board[0] == board[1] && board[1] == board[2]
-      true
-    elsif board[3] == board[4] && board[4] == board[5]
-      true
+    return true if board[0] == board[1] && board[1] == board[2]
 
-    elsif board[6] == board[7] && board[7] == board[8]
-      true
+    return true if board[3] == board[4] && board[4] == board[5]
 
-    elsif board[0] == board[3] && board[3] == board[6]
-      true
+    return true if board[6] == board[7] && board[7] == board[8]
 
-    elsif board[1] == board[4] && board[4] == board[7]
-      true
+    return true if board[0] == board[3] && board[3] == board[6]
 
-    elsif board[2] == board[5]  && board[5] == board[8]
-      true
+    return true if board[1] == board[4] && board[4] == board[7]
 
-    elsif board[0] == board[4]  && board[4] == board[8]
-      true
+    return true if board[2] == board[5] && board[5] == board[8]
 
-    elsif board[2] == board[4] && board[4] == board[6]
-      true
-    else
-      false
-    end
+    return true if board[0] == board[4] && board[4] == board[8]
+    
+    return true if board[2] == board[4] && board[4] == board[6]
+    false
   end
 
   def playerturn(cell_num, turn)
