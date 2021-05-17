@@ -35,14 +35,12 @@ class TicTac
   end
 
   def playerturn(name,x)
-    check= TicTac.new
     puts "Its #{name} turn!"
     puts "\n"
     puts 'Please select the available cell from the board'
     cell_num = gets.chomp.to_i
     loop do
-      if cell_num >= 1 && cell_num <= 9  &&  $instance.board[cell_num-1]==cell_num     
-        puts "valid move"   
+      if cell_num >= 1 && cell_num <= 9  &&  $instance.board[cell_num-1]==cell_num        
         if x==0
           $instance.board[cell_num-1]='X'
         else
@@ -113,7 +111,6 @@ num_turn = 0
 loop do
   puts `clear`
   Tic.displayboard
-  puts num_turn
   puts "\n"
   if num_turn == 9
     puts 'The game is drawn no player won'
@@ -123,6 +120,8 @@ loop do
   if x.zero?
     Tic.playerturn(name1,x)
     if Tic.checkwinner
+      puts `clear`
+      Tic.displayboard
       puts "#{name1}is a Winner"
       sleep(3)
       return
@@ -133,6 +132,8 @@ loop do
   else
     Tic.playerturn(name2,x)
     if Tic.checkwinner
+      puts `clear`
+      Tic.displayboard
       puts "#{name2}is a Winner"
       return
     end
