@@ -1,4 +1,4 @@
-# rubocop: disable Metrics/CyclomaticComplexity, Metrics/PerceivedComplexity,  Metrics/AbcSize, Lint/DuplicateBranch
+# rubocop: disable Metrics/CyclomaticComplexity, Metrics/PerceivedComplexity,  Metrics/AbcSize
 
 # Description/Explanation of class board
 class Board
@@ -33,8 +33,9 @@ class Board
     return true if board[2] == board[5] && board[5] == board[8]
 
     return true if board[0] == board[4] && board[4] == board[8]
-    
+
     return true if board[2] == board[4] && board[4] == board[6]
+    
     false
   end
 
