@@ -35,7 +35,6 @@ class Board
     return true if board[0] == board[4] && board[4] == board[8]
 
     return true if board[2] == board[4] && board[4] == board[6]
-    
     false
   end
 
@@ -55,4 +54,4 @@ class Board
   end
 end
 
-# rubocop: enable Metrics/CyclomaticComplexity, Metrics/PerceivedComplexity,  Metrics/AbcSize, Lint/DuplicateBranch
+# rubocop: enable Metrics/CyclomaticComplexity, Metrics/PerceivedComplexity,  Metrics/AbcSize
