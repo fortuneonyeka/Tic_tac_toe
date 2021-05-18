@@ -1,7 +1,7 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # Tic Tac Toe 👇
-## Welcome to Zulfizar and Angel's interesting game 🙌
+## Welcome to Fortunatus and Wajahat's interesting Tic-tac-toe game 🙌
 ## Game description
 **Tic-tac-toe** (American English), noughts and crosses (Commonwealth English and British English), or Xs and Os/“X’y O’sies” (Ireland), is a paper-and-pencil game for two players, X and O, who take turns marking the spaces in a 3×3 grid. The player who succeeds in placing three of their marks in a diagonal, horizontal, or vertical row is the winner. It is a solved game with a forced draw assuming best play from both players.<br>
 1. Number of players 🙍‍♂️🙎🏻‍♀️: 2
@@ -16,7 +16,6 @@ In order to win the game, a player must place three of their marks in a horizont
 The following example game is won by the second player, O:<br>
 <img align="center" alt="GIF" src="https://media.giphy.com/media/ChzovjKPuEiYe8ePih/giphy.gif" />
 
-Players soon discover that the best play from both parties leads to a draw. Hence, tic-tac-toe is most often played by young children, who often have not yet discovered the optimal strategy.
 
 ## Content
 
