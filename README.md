@@ -65,8 +65,8 @@ To get a local copy up and running follow these simple steps.
 👩🏻‍💼 **Ihedoro Fortunatus**
 
 - GitHub: [fortuneonyeka](https://github.com/fortuneonyeka)
-- Twitter: [fortuneonyeka](https://twitter.com/FortuneOnyeka)
-- LinkedIn: [Fortunatus Ihedoro](https://www.linkedin.com/in/fortunatus-ihedoro-5a43711a3/)
+- Twitter: [FortuneOnyeka](https://twitter.com/FortuneOnyeka)
+- LinkedIn: [fortunatus Ihedoro](https://www.linkedin.com/in/fortunatus-ihedoro-5a43711a3/)
 
 🙍‍♂️ **wajahat akram**
 
