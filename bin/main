@@ -51,7 +51,7 @@ x = 0
 num_turn = 0
 loop do
   puts `clear`
-  instance.displayboard
+ puts instance.display_board
   puts "\n"
   if num_turn == 9
     puts 'The game is drawn no player won'
@@ -64,7 +64,7 @@ loop do
     instance.playerturn(cell, x)
     if instance.checkwinner
       puts `clear`
-      instance.displayboard
+      puts instance.display_board
       puts "#{name1} is the Winner"
       sleep(3)
       return
@@ -80,7 +80,7 @@ loop do
     instance.playerturn(cell, x)
     if instance.checkwinner
       puts `clear`
-      instance.displayboard
+      puts instance.display_board
       puts "#{name2} is the Winner"
       return
     end
@@ -88,4 +88,6 @@ loop do
   end
   num_turn += 1
 end
+
+
 # rubocop: enable Metrics/BlockLength
