@@ -32,15 +32,16 @@ Players soon discover that the best play from both parties leads to a draw. Henc
 ## Gameplay Instructions
 
 <ol>
-  <li>To begin the game firstly, follow Getting started section</li>
-  <li>Find someone to play with.</li>
-  <li>As the file is executed the game will ask you to first input Player X name. The same will be repeated for player O.</li>
-  <li>Player X will be prompted to enter a number from 1-9 representing a field in the tic-tac-toe grid(3x3), once the player obliges, his symbol will be marked in his selected spot.</li>
-  <li>Player O will be asked to repeat as above.</li>
+  <li>To begin the game, follow Getting started section</li>
+  <li>Find a partner to play with.</li>
+  <li>As soon as the file is executed the game will ask you to first input firstr Player name. The same will be repeated for the second player.</li>
+  <li>The first player would be asigned symbol X and the second player symbol 0.</li>
+  <li>The first Player will be prompted to enter a number from 1-9 representing a field in the tic-tac-toe grid(3x3), as soon as the player obliges, his symbol will be marked in his selected spot.</li>
+  <li>The second player will be asked to perform above steps.</li>
   <li>The game will keep alternating players until a win or draw is achieved.</li>
   <li>
 To win the game, a player must fill out a line with his symbol vertically, horizontally, or diagonally.</li>
-  <li>A draw is reached when neither player manages the above and the grid is filled.
+  <li>A draw is reached when neither player manages the above and the grid or board is filled.
 </li>
 </ol>
 
@@ -55,8 +56,8 @@ To win the game, a player must fill out a line with his symbol vertically, horiz
 
 To get a local copy up and running follow these simple steps.
 
-- `git clone https://github.com/AbdumurodovaZulfizar/Tic-Tac-Toe-Game.git`
-- `cd Tic-Tac-Toe-Game`
+- `git clone https://github.com/fortuneonyeka/Tic_tac_toe.git`
+- `cd Tic_tac_toe`
 - Open Ruby file on your editor
 - Open your terminal(Command Prompt) and type bin/main.rb
 
@@ -94,5 +95,5 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-Copyright 2021 Zulfizar Abdumurodova & Ángel Díaz
+Copyright 2021 Fortunatus Ihedoro & wajahat akram
 - [MIT](https://github.com/fortuneonyeka/Tic_tac_toe/blob/Development/LICENSE) for this project.
