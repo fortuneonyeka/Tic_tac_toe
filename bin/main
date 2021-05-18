@@ -1,41 +1,21 @@
 #!/usr/bin/env ruby
 
+# rubocop: disable Metrics/BlockLength
+require_relative '../lib/game_logic'
+
 # board
+
+# Description/Explanation of class board
 class TicTac
+  #:nodoc:
   def initialize; end
-
-  def checkwinner
-    puts 'The winner is X'
-  end
-
-  def playerturn(name)
-    puts "Its #{name} turn!"
-    puts "\n"
-    puts 'Please select the available cell from the board'
-    cell_num = gets.chomp.to_i
-    loop do
-      break if cell_num >= 1 && cell_num <= 9
-
-      puts 'invalid move'
-      puts 'Please enter a valid number from 1 - 9!'
-      cell_num = gets.chomp.to_i
-    end
-  end
 
   def numeric?(obj)
     !obj.to_s.match(/\A[+-]?\d+?(\.\d+)?\Z/).nil?
   end
-
-  def displayboard
-    puts '+---+---+---+'
-    puts '| 1 | 2 | 3 |'
-    puts '+---+---+---+'
-    puts '| 4 | 5 | 6 |'
-    puts '+---+---+---+'
-    puts '| 7 | 8 | 9 |'
-    puts '+---+---+---+'
-  end
 end
+
+instance = Board.new
 Tic = TicTac.new
 puts 'Welcome to Ruby"s Tic Tac Toe'
 puts 'Enter first player name:'
@@ -66,44 +46,55 @@ loop do
 end
 
 puts "#{name1} will play with  X and #{name2} will play with  O"
-sleep(1)
-puts "\n Lets Start.."
-sleep(1)
+
 x = 0
 num_turn = 0
 loop do
   puts `clear`
-  Tic.displayboard
+  puts instance.display_board
   puts "\n"
+  if num_turn == 9
+    puts 'The game is drawn no player won'
+    sleep(3)
+    return
+  end
   if x.zero?
-    Tic.playerturn(name1)
+    puts "Its #{name1} turn! \n Please select the available cell from the board"
+    cell = gets.chomp.to_i
+    while instance.playerturn(cell, x)
+      puts 'invalid move Please enter a valid number from 1 - 9!'
+      cell = gets.chomp.to_i
+    end
+
+    if instance.checkwinner
+      puts `clear`
+      puts instance.display_board
+      puts "#{name1} is the Winner"
+      sleep(3)
+      return
+    end
 
     x = 1
 
   else
-    Tic.playerturn(name2)
-    x = 0
-  end
-  if num_turn == 9
-    puts 'The game is drawn no player won'
-    return
-  else
-    Tic.checkwinner
+    puts "Its #{name2} turn!"
+    puts "\n"
+    puts 'Please select the available cell from the board'
+    cell = gets.chomp.to_i
+    while instance.playerturn(cell, x)
+      puts 'invalid move Please enter a valid number from 1 - 9!'
+      cell = gets.chomp.to_i
+    end
 
+    if instance.checkwinner
+      puts `clear`
+      puts instance.display_board
+      puts "#{name2} is the Winner"
+      return
+    end
+    x = 0
   end
   num_turn += 1
 end
 
-# def full?(board)
-#   board.all?{|i| i == "x" || i == "0"}
-# end
-
-# def draw?(board)
-#   if !won?(board) && full?(board)
-#     return true
-#   elsif !won (board) && !full?(board)
-#     return false
-#   else won?(board)
-#     return false
-#   end
-# end
+# rubocop: enable Metrics/BlockLength
