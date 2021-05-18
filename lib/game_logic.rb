@@ -10,14 +10,12 @@ class Board
   end
 
   def display_board
-  
     " #{board[0]} | #{board[1]} | #{board[2]} \n" \
     "+---+---+---+\n" \
     " #{board[3]} | #{board[4]} | #{board[5]} \n" \
     "+---+---+---+\n" \
     " #{board[6]} | #{board[7]} | #{board[8]} \n" \
-   
- end
+  end
 
   def checkwinner
     return true if board[0] == board[1] && board[1] == board[2]
@@ -39,22 +37,17 @@ class Board
     false
   end
 
-
-def playerturn(cell_num, turn)
-  loop do
+  def playerturn(cell_num, turn)
     if cell_num >= 1 && cell_num <= 9 && board[cell_num - 1] == cell_num
       board[cell_num - 1] = if turn.zero?
                               'X'
                             else
                               'O'
                             end
-      break
+      return false
     end
-    puts 'invalid move Please enter a valid number from 1 - 9!'
-    cell_num = gets.chomp.to_i
+    true
   end
 end
-end
-  
 
 # rubocop: enable Metrics/CyclomaticComplexity, Metrics/PerceivedComplexity,  Metrics/AbcSize
