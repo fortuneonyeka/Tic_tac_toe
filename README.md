@@ -62,17 +62,16 @@ To get a local copy up and running follow these simple steps.
 
 ## Authors
 
-👩🏻‍💼 **Zulfizar Abdumurodova**
+👩🏻‍💼 **Ihedoro Fortunatus**
 
-- GitHub: [Abdumurodova Zulfizar](https://github.com/AbdumurodovaZulfizar)
-- Twitter: [Abdumurodova Zulfizar](https://twitter.com/Zulfiza70357085)
-- LinkedIn: [Abdumurodova Zulfizar](https://www.linkedin.com/in/zulfizar-abdumurodova-a61527206/)
+- GitHub: [fortuneonyeka](https://github.com/fortuneonyeka)
+- Twitter: [fortuneonyeka](https://twitter.com/FortuneOnyeka)
+- LinkedIn: [Fortunatus Ihedoro](https://www.linkedin.com/in/fortunatus-ihedoro-5a43711a3/)
 
-🙍‍♂️ **Angel Diaz**
+🙍‍♂️ **wajahat akram**
 
-- GitHub: [Angel Diaz](https://github.com/ad9311)
-- Twitter: [Angel Diaz](https://twitter.com/adiaz9311)
-- LinkedIn: [Angel Diaz](https://www.linkedin.com/in/ad9311/)
+- GitHub: [wajahat akram ](https://github.com/wajahat414)
+- Twitter: [wajahat akram](https://twitter.com/wajahat414 )
 
 ### Dependencies
 
@@ -82,7 +81,7 @@ Ruby 3.0.1
 
 Contributions, issues and feature requests are welcome!
 
-You can do it on [issues page](https://github.com/AbdumurodovaZulfizar/Tic-Tac-Toe-Game/issues/4).
+You can do it on [issues page](https://github.com/fortuneonyeka/Tic_tac_toe/issues/6).
 
 ## Show your support
 
@@ -90,7 +89,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- [Microverse](https://www.microverse.org/) for international opportunities.
+- [Microverse](https://www.microverse.org/) 
 - Special thanks to all code reviewers.
 
 ## 📝 License
