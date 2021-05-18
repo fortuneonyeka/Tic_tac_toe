@@ -65,7 +65,7 @@ loop do
     if instance.checkwinner
       puts `clear`
       instance.displayboard
-      puts "#{name1}is a Winner"
+      puts "#{name1} is a Winner"
       sleep(3)
       return
     end
@@ -81,7 +81,7 @@ loop do
     if instance.checkwinner
       puts `clear`
       instance.displayboard
-      puts "#{name2}is a Winner"
+      puts "#{name2} is a Winner"
       return
     end
     x = 0
