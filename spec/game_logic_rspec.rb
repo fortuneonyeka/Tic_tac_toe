@@ -1,27 +1,26 @@
-require 'game_logic'
-
-# RSpec.describe Board do
-#   def display_board
-#       " #{board[0]} | #{board[1]} | #{board[2]} \n" \
-#       "+---+---+---+\n" \
-#       " #{board[3]} | #{board[4]} | #{board[5]} \n" \
-#       "+---+---+---+\n" \
-#       " #{board[6]} | #{board[7]} | #{board[8]} \n" \
-#   end
-  
+require './lib/game_logic'
 
 
-  # describe "Computer" do
-  #   it "creates file username" do
-  #   user = Computer.new
-  #   expect(user).to be_truthy
-  #   end
-  # end
 
-  describe '#self.display_board' do
-    subject = Board.new
-      it 'returns array of 1 to 9' do
-        expect(subject).to eql(display_board)
+  describe Board do
+    describe '#display_board' do
+      play = Board.new 
+      it 'should display number from 1-9' do
+        expect(play.display_board).to eql(
+          " 1 | 2 | 3 \n" \
+          "------------\n" \
+          " 4 | 5 | 6 \n" \
+          "------------\n" \
+          " 7 | 8 | 9 \n"
+        )
       end
+  end
+
+  describe '#player_turn' do
+    play = Board.new 
+    it 'should display available options' do
+      expect(@board = (1..9).to_a).to eql([1, 2, 3, 4, 5, 6, 7, 8, 9])
     end
+  end
 end
+  

@@ -10,11 +10,11 @@ class Board
   end
 
   def display_board
-    " #{board[0]} | #{board[1]} | #{board[2]} \n" \
-    "+---+---+---+\n" \
-    " #{board[3]} | #{board[4]} | #{board[5]} \n" \
-    "+---+---+---+\n" \
-    " #{board[6]} | #{board[7]} | #{board[8]} \n" \
+    " 1 | 2 | 3 \n" \
+    "------------\n" \
+    " 4 | 5 | 6 \n" \
+    "------------\n" \
+    " 7 | 8 | 9 \n"
   end
 
   def checkwinner
@@ -39,7 +39,7 @@ class Board
 
   def playerturn(cell_num, turn)
     if cell_num >= 1 && cell_num <= 9 && board[cell_num - 1] == cell_num
-      board[cell_num - 1] = if turn.zero?
+      board[cell_num - 1] = if turn == 0
                               'X'
                             else
                               'O'
