@@ -39,30 +39,29 @@ require './lib/game_logic'
      expect(play.checkwinner).to eq(true)
    end
   describe '#tie?' do
-    num_turn = 0
+   
     it 'should display true if all board position is taken' do
       play.playerturn(0, 'X')
-      play.num_turn
+
       play.playerturn(1, 'O')
-      play.num_turn
+
       play.playerturn(2, 'X')
-      play.num_turn
+      
       play.playerturn(3, 'O')
-      play.num_turn
+
       play.playerturn(4, 'X')
-      play.num_turn
+
       play.playerturn(5, 'O')
-      play.num_turn
+
       play.playerturn(6, 'O')
-      play.num_turn
+
       play.playerturn(7, 'X')
-      play.num_turn
+
       play.playerturn(8, 'O')
-      play.num_turn
-      play.num_turn
-      play.cell_num
-      expect(play.tie?).to eql(true)
-      num_turn +=1
+
+      play.playerturn(9, 'X')
+      expect(play.checkwinner).to eql(true)
+      
     end
   end
    

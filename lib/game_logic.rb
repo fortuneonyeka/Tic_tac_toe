@@ -25,7 +25,7 @@ class Board
   end
   
   def tie?
-    num_turn == 9 && !win?
+    @board == 9 && !win?
   end
 
   
