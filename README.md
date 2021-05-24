@@ -60,18 +60,30 @@ To get a local copy up and running follow these simple steps.
 - Open Ruby file on your editor
 - Open your terminal(Command Prompt) and type bin/main.rb
 
+Testing With Rspec
+- Test cases have been written carefully to make sure the public methods works as expected
+- From the Terminal run the command
+$ rspec
+
 ## Authors
 
 👩🏻‍💼 **Ihedoro Fortunatus**
 
-- GitHub: [fortuneonyeka](https://github.com/fortuneonyeka)
+- GitHub: [Fortuneonyeka](https://github.com/fortuneonyeka)
 - Twitter: [FortuneOnyeka](https://twitter.com/FortuneOnyeka)
-- LinkedIn: [fortunatus Ihedoro](https://www.linkedin.com/in/fortunatus-ihedoro-5a43711a3/)
+- LinkedIn: [Fortunatus Ihedoro](https://www.linkedin.com/in/fortunatus-ihedoro-5a43711a3/)
 
-🙍‍♂️ **wajahat akram**
+🙍‍♂️ **Wajahat Akram**
 
-- GitHub: [wajahat akram ](https://github.com/wajahat414)
-- Twitter: [wajahat akram](https://twitter.com/wajahat414 )
+- GitHub: [wajahat akram](https://github.com/wajahat414)
+- Twitter: [wajahat akram](https://twitter.com/wajahat414)
+
+🙍‍♂️ **Boaz Aduda**
+
+- GitHub: [Boaz Aduda](https://github.com/Aduda-Boaz)
+- Twitter: [Boaz Aduda](https://twitter.com/BoazAduda)
+- LinkedIn: [Boaz Aduda](https://www.linkedin.com/in/boaz-aduda/)
+
 
 ### Dependencies
 
