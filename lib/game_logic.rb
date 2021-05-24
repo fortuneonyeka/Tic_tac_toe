@@ -23,7 +23,7 @@ class Board
 
   def playerturn(cell_num, turn)
     if cell_num >= 1 && cell_num <= 9 && board[cell_num - 1] == cell_num
-      board[cell_num - 1] = if turn == 0
+      board[cell_num - 1] = if turn = 0
                               'X'
                             else
                               'O'
