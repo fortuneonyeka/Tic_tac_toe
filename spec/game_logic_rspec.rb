@@ -38,8 +38,8 @@ require './lib/game_logic'
     play.playerturn(7, 1)
      expect(play.checkwinner).to eq(true)
    end
+
   describe '#tie?' do
-   
     it 'should display true if all board position is taken' do
       play.playerturn(0, 'X')
 

@@ -23,10 +23,6 @@ class Board
      [%w[X X X],%w[O O O]].include? indexes.map {|i|board[i]}
     end
   end
-  
-  def tie?
-    @board == 9 && !win?
-  end
 
   
   def playerturn(cell_num, turn)
