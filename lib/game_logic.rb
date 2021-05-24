@@ -1,6 +1,3 @@
-
-
-# Description/Explanation of class board
 class Board
   #:nodoc:
   attr_accessor :board
