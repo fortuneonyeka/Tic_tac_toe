@@ -1,4 +1,3 @@
-
 require './lib/game_logic'
 
 describe Board do
@@ -63,4 +62,3 @@ describe Board do
     end
   end
 end
-
