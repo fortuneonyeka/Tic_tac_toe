@@ -67,7 +67,7 @@ loop do
       cell = gets.chomp.to_i
     end
 
-    if instance.winner
+    if instance.checkwinner
       puts `clear`
       puts instance.display_board
       puts "#{name1} is the Winner"
@@ -87,7 +87,7 @@ loop do
       cell = gets.chomp.to_i
     end
 
-    if instance.winner
+    if instance.checkwinner
       puts `clear`
       puts instance.display_board
       puts "#{name2} is the Winner"

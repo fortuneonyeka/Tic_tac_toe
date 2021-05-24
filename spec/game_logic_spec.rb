@@ -1,6 +1,4 @@
 require './lib/game_logic'
-Metrics/ModuleLength:
-  Enabled: false
 
   describe Board do
     let(:play) {Board.new }
@@ -62,7 +60,6 @@ Metrics/ModuleLength:
       play.playerturn(6, 'O')
       play.playerturn(7, 'X')
       play.playerturn(8, 'O')
-      play.playerturn(9, 'X')
       expect(play.checkwinner).to eql(true)
     end
   end
