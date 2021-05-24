@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class Board
   #:nodoc:
   attr_accessor :board
