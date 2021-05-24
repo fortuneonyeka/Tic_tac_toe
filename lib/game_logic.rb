@@ -1,6 +1,3 @@
-# rubocop: disable Metrics/CyclomaticComplexity, Metrics/PerceivedComplexity,  Metrics/AbcSize
-
-# Description/Explanation of class board
 class Board
   #:nodoc:
   attr_accessor :board
@@ -10,36 +7,23 @@ class Board
   end
 
   def display_board
-    " #{board[0]} | #{board[1]} | #{board[2]} \n" \
-    "+---+---+---+\n" \
-    " #{board[3]} | #{board[4]} | #{board[5]} \n" \
-    "+---+---+---+\n" \
-    " #{board[6]} | #{board[7]} | #{board[8]} \n" \
+    " 1 | 2 | 3 \n" \
+    "------------\n" \
+    " 4 | 5 | 6 \n" \
+    "------------\n" \
+    " 7 | 8 | 9 \n"
   end
 
   def checkwinner
-    return true if board[0] == board[1] && board[1] == board[2]
-
-    return true if board[3] == board[4] && board[4] == board[5]
-
-    return true if board[6] == board[7] && board[7] == board[8]
-
-    return true if board[0] == board[3] && board[3] == board[6]
-
-    return true if board[1] == board[4] && board[4] == board[7]
-
-    return true if board[2] == board[5] && board[5] == board[8]
-
-    return true if board[0] == board[4] && board[4] == board[8]
-
-    return true if board[2] == board[4] && board[4] == board[6]
-
-    false
+    win_combo = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]]
+    win_combo.any? do |indexes|
+      [%w[X X X], %w[O O O]].include?(indexes.map { |i| board[i] })
+    end
   end
 
   def playerturn(cell_num, turn)
     if cell_num >= 1 && cell_num <= 9 && board[cell_num - 1] == cell_num
-      board[cell_num - 1] = if turn.zero?
+      board[cell_num - 1] = if turn == '0'
                               'X'
                             else
                               'O'
@@ -49,5 +33,3 @@ class Board
     true
   end
 end
-
-# rubocop: enable Metrics/CyclomaticComplexity, Metrics/PerceivedComplexity,  Metrics/AbcSize
