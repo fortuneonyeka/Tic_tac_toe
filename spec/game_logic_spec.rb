@@ -42,6 +42,13 @@ require './lib/game_logic'
     play.playerturn(7, 1)
      expect(play.checkwinner).to eq(true)
    end
+
+   it 'Second player should return true' do
+    play.playerturn(1, 1)
+    play.playerturn(4, 1)
+    play.playerturn(6, 1)
+     expect(play.checkwinner).to eq(false)
+   end
   describe '#tie?' do
     it 'should display true if all board position is taken' do
       play.playerturn(0, 'X')
