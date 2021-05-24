@@ -1,4 +1,6 @@
 require './lib/game_logic'
+Metrics/ModuleLength:
+  Enabled: false
 
   describe Board do
     let(:play) {Board.new }
