@@ -28,6 +28,13 @@ require './lib/game_logic'
     play.playerturn(3, 0)
      expect(play.checkwinner).to eq(true)
    end
+
+   it 'First player should return true' do
+    play.playerturn(1, 0)
+    play.playerturn(4, 0)
+    play.playerturn(3, 0)
+     expect(play.checkwinner).to eq(false)
+   end
    
    it 'Second player should return true' do
     play.playerturn(1, 1)
